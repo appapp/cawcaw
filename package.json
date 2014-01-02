@@ -1,0 +1,31 @@
+{
+  "name": "cawcaw",
+  "version": "0.0.6",
+  "main": "lib/cawcaw.js",
+  "description": "cawcaw ( aka ChaffingAndWinnowing,ChaffingAndWinnowing ) core system",
+  "homepage": "https://github.com/appapp/cawcaw",
+  "bugs": "https://github.com/appapp/cawcaw/issues",
+  "author": {
+    "name": "Alfonso Polo",
+    "email": "app.app@gmail.com",
+    "url": "https://github.com/appapp/cawcaw"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appapp/cawcaw"
+  },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "dependencies": {
+    "underscore": "1.5.2"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.0"
+  }
+}
