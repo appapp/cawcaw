@@ -4,8 +4,8 @@
     https://github.com/appapp/cawcaw
       http://www.matematicas.net/paraiso/cripto.php?id=chaff
       http://people.csail.mit.edu/rivest/Chaffing.txt
-        _ paquete bueno (grano) real
-        _ paquete malo (paja) fake
-        _ Chaffing ,,, empajado ,,, cerrando
-        _ Winnowing ,,, aventado ,,, abriendo
+        _ true packet (grain) real
+        _ false packet (straw) fake
+        _ Chaffing ,,, chaff ,,, closing info
+        _ Winnowing ,,, winnow ,,, opening info
 
