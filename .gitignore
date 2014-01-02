@@ -11,6 +11,7 @@ node_modules
 *.tar
 *.zip
 *.log
+*.orig
 .DS_Store
 .DS_Store?
 ._*

@@ -1,7 +1,7 @@
 /*
 
 cawcaw_test.js
-https://bitbucket.org/appapp/cawcaw
+https://github.com/appapp/cawcaw
 
 */
 /*
