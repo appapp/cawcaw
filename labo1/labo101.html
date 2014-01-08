@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>cawcaw // labo1 // labo101</title>
+
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="../stylesheets/cawcaw.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <h1>cawcawbundle tests/examples in browser</h1>
+  </header>
+  <section>
+    <h3>cawcaw // labo1 // labo101</h3>
+    
+    <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.</p>
+
+    <form name="form100">
+      <div>
+        <label>k:</label>
+        <div>
+          <input 
+            type="text" 
+            maxlength="32"
+            name="k"
+            value="myk" />
+        </div>
+      </div>
+      <div>
+        <label>seed:</label>
+        <div>
+          <input 
+            type="text" 
+            maxlength="32"
+            name="seed"
+            value="myseed" />
+        </div>
+      </div>
+      <div>
+        <label>txt0:</label>
+        <div>
+          <input 
+            type="text" 
+            maxlength="32"
+            name="txt0"
+            value="" />
+        </div>
+      </div>
+      <div>
+        <div>
+          <input 
+          type="button" 
+          value="ChaffingAndWinnowing" 
+          onclick="processForm100()" />
+        </div>
+      </div>
+      <div>
+        <label>chaff(txt0):</label>
+        <div>
+          <textarea 
+            name="chafftxt0" 
+            cols="72" 
+            rows="20" ></textarea>
+        </div>
+      </div>
+
+      <div>
+        <label>txt1=winnow(chaff(txt0)):</label>
+        <div>
+          <input 
+            type="text" 
+            maxlength="32"
+            name="txt1"
+            value="" />
+        </div>
+      </div>
+    </form> 
+
+    <br></br>
+    <p></p>
+
+    <h3>the code ...</h3>
+
+    <p>Alii missing oculis aliorum sicut serpere crabs nostram. Putridi braindead odores kill and infect, aere implent left four dead.</p>
+
+<pre><code>
+var cawcaw = require( "cawcaw" );
+var dataFactory = new cawcaw.model.data.Factory();
+
+var     txt0 = "foo bar ...";
+var message0 = dataFactory.createMessage( txt0 );
+    message0.private.settings.k = "mypassword";
+    message0.private.settings.seed = "myseedvalue";
+    message0 = cawcaw.data.caw.createPacketsFromMessage( message0 );
+var message1 = cawcaw.data.caw.createMessageFromPackets( message0 );
+var     txt1 = message1.private.message;
+
+console.log( txt0 );
+console.log( txt1 );
+</code></pre>
+
+    <p>Cum horribilem walking dead resurgere de crazed sepulcris creaturis, zombie sicut de grave feeding iride et serpens. Pestilentia, shaun ofthe dead scythe animated corpses ipsa screams. Pestilentia est plague haec decaying ambulabat mortuos. Sicut zeder apathetic malus voodoo. Aenean a dolor plan et terror soulless vulnerum contagium accedunt, mortui iam vivam unlife. Qui tardius moveri, brid eof reanimator sed in magna copia sint terribiles undeath legionis.</p>
+
+  <footer>
+    <p>This project is maintained by <a href="https://github.com/appapp">appapp</a></p>
+    <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+  </footer>
+</div>
+
+
+<script src="cawcaw.bundle.js"></script>
+<script type="text/javascript">
+  function processForm100(){
+    var form100 = document.forms.form100;
+    form100.txt1.value = "";
+    form100.chafftxt0.innerHTML = "";
+    var    txt0 = form100.txt0.value;
+    var       k = form100.k.value;
+    var    seed = form100.seed.value;
+    //
+    var dataFactory = new cawcaw.model.data.Factory();
+    var  message0 = dataFactory.createMessage( txt0 );
+         message0.private.settings.k = k;
+         message0.private.settings.seed = seed;
+         message0 = cawcaw.data.caw.createPacketsFromMessage( message0 );
+    var chafftxt0 = packetsToTxt( message0.public.packets );
+    var  message1 = cawcaw.data.caw.createMessageFromPackets( message0 );
+    var      txt1 = message1.private.message;
+    //
+    form100.chafftxt0.innerHTML = chafftxt0;
+    form100.txt1.value = txt1;
+  }
+  function packetsToTxt( packets ){
+    var ret = "";
+    var i, sz = packets.length;
+    for( i = 0; i < sz ; i++ ) {
+      ret = ret + packets[i].h + "\n";
+    }
+    return ret;
+  }
+</script> 
+</body>
+</html>
